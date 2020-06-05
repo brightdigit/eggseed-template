@@ -26,7 +26,7 @@ else
 fi
 
 if [[ $TRAVIS_OS_NAME = 'osx' ]]; then
-  swift package dump-package | jq -e ".products | length > 0"
+  curl -s https://raw.githubusercontent.com/daveverwer/SwiftPMLibrary/master/script.sh | bash -s -- mine
   pod lib lint
   swift package generate-xcodeproj
   pod install --silent --project-directory=Example
