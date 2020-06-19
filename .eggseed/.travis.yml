@@ -20,7 +20,7 @@ jobs:
       osx_image: xcode11.5
 env:
   global:
-  - FRAMEWORK_NAME=<% packageName %>
+  - FRAMEWORK_NAME=[[ packageName ]]
   - SWIFT_VER=5.2.4
 before_install:
   - bash -e ./Scripts/before_install.sh
